@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style type="text/css">
+      .warp {
+        padding: 0;
+        margin: 10% auto;
+        width: 50%;
+        border: 1px solid red;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <title>身份证测试</title>
+  </head>
+  <body>
+    <div class="warp">
+      <div class="content">
+        <span>开始时间:</span><input id="fYear" type="number" min="1970" /><span
+          >-</span
+        >
+        <input id="fMonth" type="number" min="1" max="12" />
+        <span>-</span><input id="fDay" type="number" min="1" max="31" />
+        <br />
+        <span>结束时间:</span>
+        <input id="lYear" type="number" min="1970" />
+        <span>-</span><input id="lMonth" type="number" min="1" max="12" />
+        <span>-</span><input id="lDay" type="number" min="1" max="31" />
+        <br />
+        <spna>请输入身份证最后一位进行匹配</spna>
+        <input type="text" id="lastNum" /><input
+          type="submit"
+          id="btn"
+          value="开始匹配"
+        />
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var fYear = $('#fYear').val(),
+        fMonth = $('#fMonth').value,
+        fDay = $('#fDay').value,
+        lYear = $('#lYear').value,
+        lMonth = $('#lMonth').value,
+        lDay = $('#lDay').value,
+        btn = $('#btn');
+      btn.click(function() {
+        console.log(fYear, fMonth, fDay, lYear, lMonth, lDay);
+      });
+    </script>
+  </body>
+</html>

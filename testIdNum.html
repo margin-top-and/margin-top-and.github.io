@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+  <meta charset="UTf-8" />
+  <head>
+    <style type="text/css">
+      .warp {
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        border-radius: 20px;
+        background-color: #eee;
+      }
+      input {
+        margin: 20% 0 30% 30%;
+      }
+    </style>
+    <script type="text/javascript" src="script.js"></script>
+    <title>测试身份证号码</title>
+  </head>
+  <body>
+    <div class="warp">
+      <input type="text" class="idNum"  />
+      <button class="idBtn" onclick="Test()">测试</button>
+    </div>
+    <!-- <script type="text/javascript">
+        if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(onSuccess, onError);
+} else {
+  alert('您的浏览器不支持使用HTML 5来获取地理位置服务');
+}
+//定位数据获取成功响应
+function onSuccess(position) {
+  alert(
+    '纬度: ' +
+      position.coords.latitude +
+      '\n' +
+      '经度: ' +
+      position.coords.longitude +
+      '\n' +
+      '海拔: ' +
+      position.coords.altitude +
+      '\n' +
+      '水平精度: ' +
+      position.coords.accuracy +
+      '\n' +
+      '垂直精度: ' +
+      position.coords.altitudeAccura
+  );
+}
+//定位数据获取失败响应
+function onError(error) {
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      alert('您拒绝对获取地理位置的请求');
+      break;
+    case error.POSITION_UNAVAILABLE:
+      alert('位置信息是不可用的');
+      break;
+    case error.TIMEOUT:
+      alert('请求您的地理位置超时');
+      break;
+    case error.UNKNOWN_ERROR:
+      alert('未知错误');
+      break;
+  }
+}
+
+    </script> -->
+    <script type="text/javascript">
+      //  var idBtn = document.getElementsByClassName('idBtn');
+            //  function IdTest() {
+            //     var idNum = document.getElementsByClassName('idNum')[0].value;
+            //     if(idNum.length == 17){
+            //         var myNum=0;
+            //         //将每一位相乘并且相加在一起,取余
+            //         myNum+=idNum[0]*7;
+            //         myNum+=idNum[1]*9;
+            //         myNum+=idNum[2]*10;
+            //         myNum+=idNum[3]*5;
+            //         myNum+=idNum[4]*8;
+            //         myNum+=idNum[5]*4;
+            //         myNum+=idNum[6]*2;
+            //         myNum+=idNum[7]*1;
+            //         myNum+=idNum[8]*6;
+            //         myNum+=idNum[9]*3;
+            //         myNum+=idNum[10]*7;
+            //         myNum+=idNum[11]*9;
+            //         myNum+=idNum[12]*10;
+            //         myNum+=idNum[13]*5;
+            //         myNum+=idNum[14]*8;
+            //         myNum+=idNum[15]*4;
+            //         myNum+=idNum[16]*2;
+            //         myNum%=11;
+            //         //判断余数对应的数字
+            //         switch(myNum){
+            //           case 0:
+            //             myNum=1;
+            //             break;
+            //           case 1:
+            //             myNum=0;
+            //             break;
+            //           case 2:
+            //             myNum='X';
+            //             break;
+            //           case 3:
+            //             myNum=9;
+            //             break;
+            //           case 4:
+            //             myNum=8;
+            //             break;
+            //           case 5:
+            //             myNum=7;
+            //             break;
+            //           case 6:
+            //             myNum=6;
+            //             break;
+            //           case 7:
+            //             myNum=5;
+            //             break;
+            //           case 8:
+            //             myNum=4;
+            //             break;
+            //           case 9:
+            //             myNum=3;
+            //             break;
+            //           case 10:
+            //             myNum=2;
+            //             break;
+            //         }
+            //         alert('最后一位是'+myNum);
+            //     }else{
+            //          alert('请输入17位身份证号码');
+            //     }
+            // };
+    //第一次改进     
+      // function Test(){
+      //   var idNum=document.getElementsByClassName('idNum')[0].value;
+      //   var coeff=[7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2,1];
+      //   var suffix=['1','0','X','9','8','7','6','5','4','3','2'];
+      //   if(idNum.length>16){
+      //     var myNum=0;
+      //     for(var i=0;i<17;i++){
+      //     myNum+=coeff[i]*idNum[i];    
+      //     }
+      //     myNum%=11;
+      //     alert('身份证最后一位是'+suffix[myNum]);
+      //   }else{
+      //     alert('请输入17位身份证号码!');
+      //     }
+      // }
+    </script>
+  </body>
+</html>
