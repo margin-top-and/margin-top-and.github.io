@@ -29,6 +29,7 @@ idBtn.onclick = function() {
     spans[1].innerHTML = '请输入17位身份证号码';
   }
 };
+
 //获得时间的范围
 let btn = document.getElementById('btn');
 btn.onclick = function() {
@@ -88,13 +89,7 @@ btn.onclick = function() {
       }
     }
     removeChars(res);
-    if (result == true) {
-      return result;
-    } else {
-      spans[0].style.display = 'flex';
-
-      spans[0].innerHTML = '输入错误,请核验后再试!';
-    }
+    return result;
   }
   let res = createdTime(
     nNum.fYear,
@@ -123,14 +118,16 @@ btn.onclick = function() {
         idNum.push(timer[j]);
       }
     }
-    if (idNum == true) {
-      spans[0].style.display = 'flex';
-      spans[0].innerHTML = '请到console控制器中查看';
-      return '符合条件的有' + idNum;
-    } else {
-      spans[0].style.display = 'flex';
-      spans[0].innerHTML = '请输入正确的最后一位';
-    }
+    return '符合条件的有:' + idNum;
+    // if (idNum == true) {
+    //   spans[0].style.display = 'flex';
+    //   spans[0].innerHTML = '请到console控制器中查看';
+    //   return '符合条件的有' + idNum;
+    // } else if (idNum == false) {
+    //   spans[0].style.display = 'flex';
+    //   spans[0].innerHTML = '请输入正确的最后一位';
+    //   return '符合条件的有' + idNum;
+    // }
   }
   console.log(test(res, lastNum));
 };
