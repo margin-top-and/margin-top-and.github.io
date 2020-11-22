@@ -1,1 +1,1 @@
-xn--panyitao.cn
+panyitao.cn
